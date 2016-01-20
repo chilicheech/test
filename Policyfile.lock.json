@@ -1,0 +1,111 @@
+{
+  "revision_id": "68c3daae542f4f3774aba1066f6c38c554900af5abe8421fb444cf87cdf798b8",
+  "name": "test",
+  "run_list": [
+    "recipe[test::default]"
+  ],
+  "cookbook_locks": {
+    "test": {
+      "version": "0.1.0",
+      "identifier": "97fe7969a52f0ef2dcad53231e503015c530516d",
+      "dotted_decimal_identifier": "42782518900240142.68359581346242128.52870060724589",
+      "source": ".",
+      "cache_key": null,
+      "scm_info": {
+        "scm": "git",
+        "remote": null,
+        "revision": null,
+        "working_tree_clean": true,
+        "published": false,
+        "synchronized_remote_branches": [
+
+        ]
+      },
+      "source_options": {
+        "path": "."
+      }
+    },
+    "openssh": {
+      "version": "1.5.2",
+      "identifier": "dccc0bf6cce11d40ad5adf881c3e047fcf5d82c7",
+      "dotted_decimal_identifier": "62148846633672989.18205004318383166.4946986369735",
+      "cache_key": "openssh-1.5.2-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/openssh/versions/1.5.2/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/openssh/versions/1.5.2/download",
+        "version": "1.5.2"
+      }
+    },
+    "iptables": {
+      "version": "2.0.2",
+      "identifier": "17221818e6c2c01e6cff993cdd50fafbdc61f102",
+      "dotted_decimal_identifier": "6511411356680896.8564094344682832.275959641141506",
+      "cache_key": "iptables-2.0.2-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/iptables/versions/2.0.2/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/iptables/versions/2.0.2/download",
+        "version": "2.0.2"
+      }
+    },
+    "compat_resource": {
+      "version": "12.5.26",
+      "identifier": "8021e2e0cc7ff57ad03b57df5e0ea61b7cbccfa2",
+      "dotted_decimal_identifier": "36066055336787957.34568900454604302.182636987076514",
+      "cache_key": "compat_resource-12.5.26-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/compat_resource/versions/12.5.26/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/compat_resource/versions/12.5.26/download",
+        "version": "12.5.26"
+      }
+    }
+  },
+  "default_attributes": {
+
+  },
+  "override_attributes": {
+
+  },
+  "solution_dependencies": {
+    "Policyfile": [
+      [
+        "test",
+        ">= 0.0.0"
+      ],
+      [
+        "openssh",
+        "= 1.5.2"
+      ],
+      [
+        "iptables",
+        "= 2.0.2"
+      ],
+      [
+        "compat_resource",
+        "= 12.5.26"
+      ]
+    ],
+    "dependencies": {
+      "openssh (1.5.2)": [
+        [
+          "iptables",
+          ">= 0.0.0"
+        ]
+      ],
+      "iptables (2.0.2)": [
+        [
+          "compat_resource",
+          ">= 0.0.0"
+        ]
+      ],
+      "compat_resource (12.5.26)": [
+
+      ],
+      "test (0.1.0)": [
+        [
+          "openssh",
+          "= 1.5.2"
+        ]
+      ]
+    }
+  }
+}
